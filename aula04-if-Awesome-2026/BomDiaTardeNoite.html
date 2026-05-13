@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <hr>
+    Hora:<input type="time" name="" id="hora" ><br>
+    <input type="button" value="Bom ?" onclick="cumprimento()">
+    <script>
+        function cumprimento(){
+            //Regras 
+            //das 6 áte antes das 12 = Bom dia
+            //depois das 18 e antes das 6 = Boa noite
+            //demais horários, isto é depois das 12 até as 18) = Boa tarde
+            var hora = document.getElementById('hora').value;
+            console.log(hora);
+            var soHora = hora.substring(0,2);
+            console.log(soHora);
+            var hora_certa = eval(soHora);
+            if((hora_certa<12) && (hora_certa>=6)){
+                alert("Bom dia");
+            }else if((hora_certa>18) || (hora_certa<6) ){
+                alert("Boa noite");
+            }else{
+                alert("Boa tarde");
+            }
+        }
+    </script>
+</body>
+</html>

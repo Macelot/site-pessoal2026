@@ -1,0 +1,94 @@
+<html>
+	<head></head>
+	<body>
+	<form enctype="multipart/form-data">
+		Nome<input type="text" id="texto1" name="texto1" size="2" maxlength="1" required>
+		<br>
+		Idade<input type="number" id="num1" name="num1" max="9" onkeyup="valida()">
+		<br>
+		Enderço<input type="text" id="texto2" name="texto2" size="10" maxlength="10" placeholder="Digite aqui">
+		<br>
+		E-mail<input type="email" id="emailDigitado" required>
+		<br>
+		Senha<input type="password" id="senhaDigitada">
+		<br>
+		Busca<input type="search"> <!-- tem o x depois que digita algo-->
+		<br>
+		URL<input type="url" required>
+		<br>
+		Hora<input type="time">
+		<br>
+		Data<input type="date">
+		<br>
+		Data com Hora<input type="datetime-local">
+		<br>
+		Mês<input type="month">
+		<br>
+		Semana<input type="week">
+		<br>
+		Cor<input type="color">
+		<br>
+		Faixa<input type="range" id="faixa1" onchange="mostraValor(this)">
+		<br>
+		Faixa2<input type="range" id="faixa2" step="2" max="20" min="2" onchange="mostraValor(this)">
+		<br>
+		Radio Manhã<input type="radio" name="r1"> Tarde<input type="radio" name="r1" >
+		<br>
+		Check<input type="checkbox" > <input type="checkbox" >
+		<br>
+		Select/ComboBox
+		<select name="dia"> 
+			<option value="seg"> Segunda-Feira </option>
+			<option value="ter"> Terça-Feira </option>
+			<option value="qua"> Quarta-Feira </option>
+			<option value="qui"> Quinta-Feira </option>
+			<option value="sex"> Sexta-Feira </option>
+		</select>
+		<br>
+		<input type="button" value="Clique Aqui" onclick="mostra()">
+		<br>
+		Texto DISABLED<input type="text" id="texto1" name="texto1" size="2" maxlength="1" value="123" disabled>
+		<br>
+		Texto READONLY<input type="text" id="texto1" name="texto1" size="2" maxlength="1" value="123" readonly>
+		<br>
+		Texto invisível<input type="text" id="texto1" name="texto1" size="2" maxlength="1" value="777" hidden>
+		<br>
+		Imagem
+		<input type="image" src="html5.png" width="10%">
+		<img src="html5.png" width="10%">
+		<br>
+		Reset<input type="reset" id="rr" value="Limpar campos">
+		<br>
+		Arquivo<input type="file">
+		<br>
+		<br>
+		Submit <input type="submit">
+	</form>
+</body>
+
+<script language="JavaSCript">
+	function valida(){
+		var valor = document.getElementById("num1").value;
+		if (valor.length>1)
+			document.getElementById("num1").value='';
+	}	
+	function mostraValor(vv){
+		let v = vv.value;
+		console.log(v);
+		alert(v);	
+	}
+	function mostra(){
+		let nome = document.getElementById("texto1").value;
+		let idade = document.getElementById("num1").value;
+		let email = document.getElementById("emailDigitado").value;
+		let endereco = document.getElementById("texto2").value;
+		let senha = document.getElementById("senhaDigitada").value;
+		
+		alert("Nome ="+nome+" Idade"+idade);
+		
+	}
+	
+	
+</script>
+
+</html>

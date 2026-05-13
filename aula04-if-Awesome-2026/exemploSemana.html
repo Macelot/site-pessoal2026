@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecionar Dias da Semana</title>
+</head>
+<body>
+
+    <h2>Selecione os dias da semana</h2>
+
+    <label><input type="checkbox" class="dia" value="Segunda-feira"> Segunda-feira</label><br>
+    <label><input type="checkbox" class="dia" value="Terça-feira"> Terça-feira</label><br>
+    <label><input type="checkbox" class="dia" value="Quarta-feira"> Quarta-feira</label><br>
+    <label><input type="checkbox" class="dia" value="Quinta-feira"> Quinta-feira</label><br>
+    <label><input type="checkbox" class="dia" value="Sexta-feira"> Sexta-feira</label><br>
+    <label><input type="checkbox" class="dia" value="Sábado"> Sábado</label><br>
+    <label><input type="checkbox" class="dia" value="Domingo"> Domingo</label><br><br>
+
+    <button onclick="contarDias()">Verificar Seleção</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function contarDias() {
+            let checkboxes = document.querySelectorAll(".dia:checked");
+            let total = checkboxes.length;
+            document.getElementById("resultado").innerText = "Você selecionou " + total + " dia(s).";
+        }
+    </script>
+
+</body>
+</html>

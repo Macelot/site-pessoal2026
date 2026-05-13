@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade com Checkbox</title>
+</head>
+<body>
+
+    <h2>Escolha suas preferências</h2>
+
+    <label>
+        <input type="checkbox" id="notificacoes"> Receber notificações
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" id="modoEscuro"> Ativar modo escuro
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" id="som"> Ativar som
+    </label>
+    <br><br>
+
+    <button onclick="verificarPreferencias()">Salvar Preferências</button>
+
+    <p id="mensagem"></p>
+
+    <script>
+        function verificarPreferencias() {
+            let notificacoes = document.getElementById("notificacoes").checked;
+            let modoEscuro = document.getElementById("modoEscuro").checked;
+            let som = document.getElementById("som").checked;
+
+            let mensagem = "Você selecionou: ";
+
+            if (notificacoes) {
+                mensagem += "Notificações, ";
+            }
+            if (modoEscuro) {
+                mensagem += "Modo Escuro, ";
+            }
+            if (som) {
+                mensagem += "Som, ";
+            }
+
+            if (!notificacoes && !modoEscuro && !som) {
+                mensagem = "Nenhuma opção selecionada.";
+            } else {
+                mensagem = mensagem.slice(0, -2) + "."; // Remove a última vírgula e adiciona ponto final
+            }
+
+            document.getElementById("mensagem").innerText = mensagem;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exemplo de Radio, JavaScript e Textarea</title>
+</head>
+<body>
+  <h1>Escolha uma opção:</h1>
+  
+  <input type="radio" id="opcao1" name="opcao" onclick="atualizar('Você escolheu a opção 1!', 'red')" />
+  <label for="opcao1">Opção 1</label><br />
+
+  <input type="radio" id="opcao2" name="opcao" onclick="atualizar('Você escolheu a opção 2!', 'blue')" />
+  <label for="opcao2">Opção 2</label><br />
+
+  <input type="radio" id="opcao3" name="opcao" onclick="atualizar('Você escolheu a opção 3!', 'green')" />
+  <label for="opcao3">Opção 3</label><br />
+
+  <p id="mensagem">Nenhuma opção selecionada</p>
+  
+  <textarea id="areaTexto" rows="4" cols="40">Aqui aparecerá a mensagem da sua escolha...</textarea>
+  
+  <div id="box" style="width: 200px; height: 100px; background-color: gray; margin-top: 20px;">
+    Cor será alterada aqui
+  </div>
+
+  <script>
+    function atualizar(mensagem, cor) {
+      document.getElementById('mensagem').textContent = mensagem;
+      document.getElementById('areaTexto').value = mensagem;
+      document.getElementById('box').style.backgroundColor = cor;
+    }
+  </script>
+</body>
+</html>

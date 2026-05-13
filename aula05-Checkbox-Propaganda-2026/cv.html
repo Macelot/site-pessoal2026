@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Currículo</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Animação suave para as barras de progresso */
+        .progress-bar {
+            transition: width 1s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-light">
+
+    <div class="container py-5">
+        <div class="row">
+            <!-- COLUNA ESQUERDA (FOTO, CONTATO, REDES SOCIAIS, IDIOMAS) -->
+            <div class="col-lg-4 mb-4">
+                <div class="card shadow-sm">
+                    <div class="card-body text-center">
+                        <!-- Espaço para foto pessoal -->
+                        <div class="mb-3">
+                            <i class="fas fa-user-circle fa-5x text-secondary"></i>
+                            <!-- Substitua o ícone acima por uma imagem real se desejar -->
+                            <!-- <img src="sua-foto.jpg" class="rounded-circle img-fluid" alt="Foto"> -->
+                        </div>
+                        <h3 class="card-title">Seu Nome</h3>
+                        <p class="text-muted">Jovem Aprendiz | Criador Digital</p>
+
+                        <!-- Redes Sociais (preencha com seus links) -->
+                        <div class="d-flex justify-content-center gap-3 mb-3">
+                            <a href="#" class="text-dark"><i class="fab fa-instagram fa-2x"></i></a>
+                            <a href="#" class="text-dark"><i class="fab fa-linkedin fa-2x"></i></a>
+                            <a href="#" class="text-dark"><i class="fab fa-github fa-2x"></i></a>
+                            <a href="#" class="text-dark"><i class="fab fa-youtube fa-2x"></i></a>
+                        </div>
+
+                        <!-- Informações de contato -->
+                        <ul class="list-unstyled">
+                            <li><i class="fas fa-envelope me-2"></i> email@exemplo.com</li>
+                            <li><i class="fas fa-phone me-2"></i> (11) 99999-9999</li>
+                            <li><i class="fas fa-map-marker-alt me-2"></i> Cidade, Estado</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Idiomas (exemplo) -->
+                <div class="card shadow-sm mt-4">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-language me-2"></i>Idiomas</h5>
+                        <ul class="list-unstyled">
+                            <li>Português (nativo)</li>
+                            <li class="mt-2">Inglês <span class="badge bg-secondary">Intermediário</span></li>
+                            <li class="mt-2">Espanhol <span class="badge bg-secondary">Básico</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Educação (para jovens, sem experiência profissional) -->
+                <div class="card shadow-sm mt-4">
+                    <div class="card-body">
+                        <h5 class="card-title"><i class="fas fa-graduation-cap me-2"></i>Educação</h5>
+                        <p><strong>Escola/Curso</strong><br>Ano de conclusão (ou cursando)</p>
+                        <p><strong>Curso Técnico/Profissionalizante</strong><br>Instituição, período</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLUNA DIREITA (SOBRE, HABILIDADES, FERRAMENTAS) -->
+            <div class="col-lg-8">
+                <!-- Sobre mim -->
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title"><i class="fas fa-user me-2"></i>Sobre mim</h4>
+                        <p class="card-text">
+                            Escreva aqui um pequeno texto sobre você, seus interesses na área de criação digital, 
+                            tecnologia e o que mais achar importante. Seja criativo!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Habilidades em ferramentas de criação -->
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title"><i class="fas fa-tools me-2"></i>Ferramentas de Criação</h4>
+                        <p class="text-muted">Ajuste as barras de progresso conforme seu nível de conhecimento.</p>
+
+                        <!-- HTML / CSS -->
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between">
+                                <span><i class="fab fa-html5 text-danger me-2"></i>HTML5 & CSS3</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar bg-success" role="progressbar" data-percent="80" style="width: 0%;"></div>
+                            </div>
+                        </div>
+
+                        <!-- JavaScript -->
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between">
+                                <span><i class="fab fa-js text-warning me-2"></i>JavaScript</span>
+                                <span>60%</span>
+                            </div>
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar bg-success" role="progressbar" data-percent="60" style="width: 0%;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Python -->
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between">
+                                <span><i class="fab fa-python text-primary me-2"></i>Python</span>
+                                <span>50%</span>
+                            </div>
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar bg-success" role="progressbar" data-percent="50" style="width: 0%;"></div>
+                            </div>
+                        </div>
+
+                        <!-- PHP -->
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between">
+                                <span><i class="fab fa-php text-info me-2"></i>PHP</span>
+                                <span>40%</span>
+                            </div>
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar bg-success" role="progressbar" data-percent="40" style="width: 0%;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Banco de Dados (MySQL, etc.) -->
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between">
+                                <span><i class="fas fa-database me-2"></i>Banco de Dados (MySQL, etc.)</span>
+                                <span>35%</span>
+                            </div>
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar bg-success" role="progressbar" data-percent="35" style="width: 0%;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Photoshop / Edição de Imagem -->
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between">
+                                <span><i class="fas fa-paint-brush text-danger me-2"></i>Photoshop / GIMP</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar bg-success" role="progressbar" data-percent="70" style="width: 0%;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Edição de Vídeo -->
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between">
+                                <span><i class="fas fa-video me-2"></i>Edição de Vídeo (Premiere, DaVinci)</span>
+                                <span>65%</span>
+                            </div>
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar bg-success" role="progressbar" data-percent="65" style="width: 0%;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Edição de Áudio -->
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between">
+                                <span><i class="fas fa-headphones me-2"></i>Edição de Áudio (Audacity, etc.)</span>
+                                <span>55%</span>
+                            </div>
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar bg-success" role="progressbar" data-percent="55" style="width: 0%;"></div>
+                            </div>
+                        </div>
+
+                        <!-- IoT / Arduino -->
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between">
+                                <span><i class="fas fa-microchip me-2"></i>IoT / Arduino</span>
+                                <span>45%</span>
+                            </div>
+                            <div class="progress" style="height: 10px;">
+                                <div class="progress-bar bg-success" role="progressbar" data-percent="45" style="width: 0%;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Você pode adicionar mais ferramentas copiando o bloco acima -->
+                    </div>
+                </div>
+
+                <!-- Outras áreas (cursos complementares, projetos) -->
+                <div class="card shadow-sm mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title"><i class="fas fa-star me-2"></i>Cursos & Projetos</h4>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><strong>Curso de JavaScript</strong> - Plataforma X (2024)</li>
+                            <li class="list-group-item"><strong>Oficina de Photoshop</strong> - Escola Y (2023)</li>
+                            <li class="list-group-item"><strong>Projeto: Site pessoal</strong> - Desenvolvido com HTML, CSS e Bootstrap</li>
+                            <li class="list-group-item"><strong>Iniciação à IoT</strong> - Arduino e sensores (2024)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Hobbies ou interesses adicionais -->
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h4 class="card-title"><i class="fas fa-heart me-2"></i>Interesses</h4>
+                        <p>
+                            <span class="badge bg-secondary me-1">Fotografia</span>
+                            <span class="badge bg-secondary me-1">Música</span>
+                            <span class="badge bg-secondary me-1">Jogos</span>
+                            <span class="badge bg-secondary me-1">Tecnologia</span>
+                            <span class="badge bg-secondary me-1">Esportes</span>
+                        </p>
+                    </div>
+                </div>
+
+            </div> <!-- fim coluna direita -->
+        </div> <!-- fim row -->
+    </div> <!-- fim container -->
+
+    <!-- Script para animar as barras de progresso -->
+    <script>
+        window.addEventListener('load', function() {
+            // Seleciona todas as barras de progresso
+            document.querySelectorAll('.progress-bar').forEach(function(bar) {
+                var percent = bar.getAttribute('data-percent');
+                if (percent) {
+                    // Aplica a largura final após um pequeno atraso para garantir a transição
+                    setTimeout(function() {
+                        bar.style.width = percent + '%';
+                    }, 100); // pequeno atraso para garantir que o CSS já foi aplicado
+                }
+            });
+        });
+    </script>
+
+    <!-- Bootstrap JS (opcional, apenas para alguns componentes interativos) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

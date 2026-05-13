@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo</title>
+</head>
+<body>
+    <input type="text" name="" id="caixa">
+    <br>
+    <input type="button" value="7" onclick="bote_caixa(7)">
+    <input type="button" value="8" onclick="bote_caixa(8)">
+    <input type="button" value="9" onclick="bote_caixa(9)">
+    <input type="button" value="x" onclick="bote_caixa('x')">
+    <br>
+    <input type="button" value="4" onclick="bote_caixa(4)">
+    <input type="button" value="5" onclick="bote_caixa(5)">
+    <input type="button" value="6" onclick="bote_caixa(6)">
+    <input type="button" value="-" onclick="bote_caixa('-')">
+
+    <br>
+    <input type="button" value="1" onclick="bote_caixa(1)">
+    <input type="button" value="2" onclick="bote_caixa(2)">
+    <input type="button" value="3" onclick="bote_caixa(3)">
+    <input type="button" value="+" onclick="bote_caixa('+')">
+    
+    <br>
+    <input type="button" value="+/-" onclick="troca_sinal()">
+    <input type="button" value="0" onclick="bote_caixa(0)">
+    <br>
+
+    <button onclick="mostra()">TESTE</button>
+    <button id="btnLampada" onclick="troca()">Exemplo</button>
+
+    <!-- Fazer os demais botões -->
+
+    <!-- Fazer os botões as operações matemáticas -->
+
+    <!-- Fazer os demais botões-->
+
+    <hr>
+    <input type="button" value="Apagar" onclick="apagar_caixa()">
+    <input type="button" value="Limpar" onclick="limpar_caixa()">
+
+    <script>
+        var lampada = "LIGADA";
+
+        function troca_sinal(){
+            var conteudo = document.getElementById('caixa').value;
+            var tamanho = conteudo.length;
+            if(eval(conteudo)>0){
+                document.getElementById('caixa').value="-"+conteudo;
+            }else{
+                document.getElementById('caixa').value=conteudo.slice(1,tamanho);
+            }
+        }
+
+        function troca(){
+            if(lampada=="LIGADA"){
+                console.log("Lampada = "+lampada);
+                document.getElementById("btnLampada").style.background='#00FF00';
+                lampada = "DESLIGADA";
+            }else{
+                console.log("Lampada = "+lampada);
+                document.getElementById("btnLampada").style.background='#FF0000';
+                lampada = "LIGADA";
+            }
+        }
+
+        function mostra(){
+            var a = 1;
+            var b = '1';
+            console.log(a+a);
+            console.log(b+b);
+        }
+        function bote_caixa(valor){
+            var n=valor;
+            document.getElementById('caixa').value+=n;
+        }
+
+        function limpar_caixa(){
+            document.getElementById('caixa').value='';
+        }
+
+        function apagar_caixa(){
+            var conteudo = document.getElementById('caixa').value;
+            var tamanho = conteudo.length;
+            conteudo = conteudo.slice(0,tamanho-1);//o slice fatia o texto e pega do inicio até um antes do final
+            document.getElementById('caixa').value=conteudo;
+            console.log(tamanho);
+        }
+    </script>
+    
+</body>
+</html>

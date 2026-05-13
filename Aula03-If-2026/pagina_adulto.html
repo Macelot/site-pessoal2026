@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Situação Visitante:</legend>
+            <div>Nascimento:</div><div> <input type="date" name="" id="mes"></div>
+            <br>
+            <div><input type="button" value="Classificação" onclick="revisao()">
+    </fieldset>  
+    <p id="status">
+    </p>
+
+ 
+
+    <script>
+        function revisao(){
+            var mes = eval(document.getElementById('mes').value);
+            var km = eval(document.getElementById('km').value);
+
+            if((mes>12) || (km>10000)){
+                document.getElementById('status').innerHTML="Revisar";
+            }else{
+                document.getElementById('status').innerHTML="";
+            }         
+        }
+        function cumprimento(){
+            var hora = document.getElementById('hora').value;
+            console.log(hora);
+            var soHora = hora.substring(0,2);
+            console.log(soHora);
+            var hora_certa = eval(soHora);
+            if((hora_certa<12) && (hora_certa>=6)){
+                alert("Bom dia");
+            }else if((hora_certa>18) || (hora_certa<6) ){
+                alert("Boa noite");
+            }else{
+                alert("Boa tarde");
+            }
+
+        }
+    </script>
+    
+</body>
+</html>

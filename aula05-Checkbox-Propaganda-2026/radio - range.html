@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Slider para Aumentar Imagem</title>
+  <style>
+    #image {
+      width: 200px; /* Largura inicial */
+      height: auto;
+      transition: width 0.1s ease;
+    }
+    #slider {
+      width: 300px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Ajuste a Largura da Imagem</h2>
+  <input id="slider" type="range" min="100" max="600" value="200" />
+  <br />
+  <img id="image" src="livro.png" alt="Imagem Exemplo" />
+
+  <script>
+    const slider = document.getElementById('slider');
+    const image = document.getElementById('image');
+
+    // Atualiza a largura da imagem em tempo real
+    slider.addEventListener('input', () => {
+      image.style.width = slider.value + 'px';
+    });
+  </script>
+</body>
+</html>

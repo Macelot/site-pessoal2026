@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>Situação Visitante:</legend>
+            Nascimento:<br>
+            <input type="date" name="" id="nascimento"><br><br>
+            <input type="button" value="Verificar" onclick="situacao()">
+    </fieldset>  
+    <script>
+        function situacao(){
+            const data = new Date(document.getElementById('nascimento').value);
+            const ano = data.getFullYear();
+            const dataAtual =  new Date();
+            const anoAtual = dataAtual.getFullYear();
+            const idade = anoAtual - ano;
+            console.log(idade);//idade que vai completar neste ano
+            if(idade<12){
+                alert("Criança");
+                console.log("Criança");
+            }  
+            if(idade>=12 && idade<18){
+                alert("Adolescente");
+                console.log("Adolescente");
+            }   
+            if(idade>=18 && idade<60){
+                alert("Adulto");
+                console.log("Adulto");
+            }     
+            if(idade>=60){
+                alert("Idoso");
+                console.log("Idoso");
+            }   
+        }
+    </script>
+</body>
+</html>
